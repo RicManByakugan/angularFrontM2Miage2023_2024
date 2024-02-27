@@ -1,12 +1,28 @@
 <p>Titre = {{titre}}</p>
 
 <div *ngFor="let assignment of assignments">
-    <p *ngIf="assignment.rendu" [ngStyle]="{'color': assignment.rendu ? 'green' : 'red'}">
+    <p *ngIf="assignment.rendu; else nonsoumis" [ngStyle]="{'color': assignment.rendu ? 'green' : 'red'}">
         Devoir intitulé {{assignment.nom}}, rendu le   
                           {{assignment.date}}.
     </p>
+    <ng-template #nonsoumis> 
+        Le devoir {{assignment.nom}} n'a pas été rendu.
+    </ng-template>
     <p *ngIf="!assignment.rendu" [ngClass]="{'rendu': !assignment.rendu, 'nonrendu': !assignment.rendu}">
         Le devoir {{assignment.nom}} n'a pas été rendu.
     </p>
  </div>
 
+ <p appRendu>Salama</p>
+ <button alert>Supprimer</button>
+
+
+@for (assignment of assignments; track assignment.nom) {
+    @if (assignment.rendu){
+        <p> Devoir intitulé {{assignment.nom}}, rendu le   
+            {{assignment.date}}. </p>
+    }
+    @else{
+        <p>Le devoir {{assignment.nom}} n'a pas été rendu.</p>
+    }
+}
