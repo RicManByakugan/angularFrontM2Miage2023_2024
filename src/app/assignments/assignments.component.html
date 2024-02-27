@@ -1,0 +1,12 @@
+<p>Titre = {{titre}}</p>
+
+<div *ngFor="let assignment of assignments">
+    <p *ngIf="assignment.rendu" [ngStyle]="{'color': assignment.rendu ? 'green' : 'red'}">
+        Devoir intitulé {{assignment.nom}}, rendu le   
+                          {{assignment.date}}.
+    </p>
+    <p *ngIf="!assignment.rendu" [ngClass]="{'rendu': !assignment.rendu, 'nonrendu': !assignment.rendu}">
+        Le devoir {{assignment.nom}} n'a pas été rendu.
+    </p>
+ </div>
+
