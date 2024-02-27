@@ -5,3 +5,7 @@
 .mb-2{
     margin-bottom: 10px;
 }
+
+mat-grid-tile {
+    background: lightblue;
+}

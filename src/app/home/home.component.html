@@ -1,23 +1,70 @@
-<section>
-    <button mat-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-stroked-button color="accent">Accent</button>
-    <button mat-flat-button color="warn">Warn</button>
-    <button mat-button disabled>Disabled</button>
-    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
-</section>
+<mat-grid-list cols="4" rowHeight="2:1">
+    <mat-grid-tile>
+        <section>
+            <button mat-button>Basic</button>
+            <button mat-raised-button color="primary">Primary</button>
+            <button mat-stroked-button color="accent">Accent</button>
+            <button mat-flat-button color="warn">Warn</button>
+            <button mat-button disabled>Disabled</button>
+            <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+        </section>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div matBadge="4" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+
+        <div matBadge="1" matBadgeSize="large" class="demo-section">Text with large badge</div>
+
+        <div class="demo-section">
+            Icon with a badge
+            <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+            <span class="cdk-visually-hidden">
+            Example with a home icon with overlaid badge showing the number 15
+            </span>
+        </div>
+
+        <div class="demo-section">
+            Button with a badge on the left
+            <button mat-raised-button color="primary"
+                matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+              Action
+            </button>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <button mat-raised-button color="primary"
+            matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+            Action
+        </button>
+
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <section>
+            <button mat-icon-button color="primary" arial-label="Home">
+                <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button disabled color="primary" arial-label="Home">
+                <mat-icon>home</mat-icon>
+            </button>
+            <button mat-fab color="primary" arial-label="Home">
+                <mat-icon>home</mat-icon>
+            </button>
+            <button mat-mini-fab color="primary" arial-label="Home">
+                <mat-icon>home</mat-icon>
+            </button>
+        </section>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
 <mat-divider class="mt-2 mb-2"></mat-divider>
-<section>
-    <button mat-icon-button color="primary" arial-label="Home">
-        <mat-icon>home</mat-icon>
-    </button>
-    <button mat-icon-button disabled color="primary" arial-label="Home">
-        <mat-icon>home</mat-icon>
-    </button>
-    <button mat-fab color="primary" arial-label="Home">
-        <mat-icon>home</mat-icon>
-    </button>
-    <button mat-mini-fab color="primary" arial-label="Home">
-        <mat-icon>home</mat-icon>
-    </button>
-</section>
+
+<button mat-raised-button color="primary"
+    matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Action
+</button>
+
+<div class="demo-section">
+    <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+</div>
+
+<div matBadge="1" matBadgeSize="large" class="demo-section">Text with large badge</div>
